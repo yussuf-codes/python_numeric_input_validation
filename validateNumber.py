@@ -1,9 +1,5 @@
 def validateType(object: object, objectType: type) -> bool:
-    try:
-        objectType(object)
-        return True
-    except ValueError:
-        return False
+    return isinstance(object, objectType)
 
 
 def validateRange(number: int, numberRange: tuple[int]) -> bool:
